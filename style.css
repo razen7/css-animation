@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    width: 100vw;
+    text-align: center;
+}
+
+h1.slidein {
+    border: 1px solid red;
+    animation-name: slidein;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+
+    50% {
+        margin-left: 0;
+    }
+
+    to {
+        margin-left: -100%;
+        width: 100%;
+    }
+}
+
+h1.bounce {
+    color: aqua;
+    font-size: 100px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes bounce {
+    from {
+        font-size: 95px;
+    }
+
+    50% {
+        font-size: 0px;
+    }
+
+    90% {
+        font-size: 100px;
+    }
+
+    to {
+        font-size: 95px;
+    }
+}
+
+.dots-bounce{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.dot {
+    background-color: antiquewhite;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: black;
+    animation: jumping 1.6s ease-in infinite;
+}
+
+.dot2{
+    animation-delay: 0.25s;
+}
+
+.dot3{
+    animation-delay: 0.5s;
+}
+
+@keyframes jumping {
+    from {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
